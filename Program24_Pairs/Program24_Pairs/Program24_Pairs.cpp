@@ -25,13 +25,15 @@ int initBoard()
             cout << "[" << i + 1 << "]";
         }
 
-        if (i == 4);
+        
+        if (i == 4)
         {
             cout << endl;
         }
+        
     }
 
-
+    cout << endl;
     return(0);
 }
 
@@ -51,9 +53,9 @@ int updateBoard(int guess1, int guess2)
             cout << "[" << i + 1 << "]" << " ";
         }
 
-        if (i == 4);
+        if (i == 4)
         {
-            cout << "\n";
+            cout << endl;
         }
 
     }
@@ -74,6 +76,7 @@ int main()
         cout << "What is your first guess? (1-10)" << endl;
         cin >> guess1;
         updateBoard(guess1,0);
+        cout << endl;
         cout << "What is your second guess? (1-10)" << endl;
         cin >> guess2;
         updateBoard(guess1, guess2);
@@ -93,13 +96,18 @@ int main()
             cout << "Not a match!" << endl;
             Sleep(5000);
         }
+
+        attemptCount++;
+        if (score == 5)
+        {
+            cout << "You have won the game!" << endl;
+            Sleep(3000);
+        }
       
     }
 
-    if (score = 5)
-    {
-        cout << "You have won the game!" << endl;
-        Sleep(3000);
-    }
+    
+
+
 
 }
